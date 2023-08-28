@@ -6,8 +6,23 @@ import { data } from "../data/data";
 
 export function getAsteroidDataByName(data, asteroidName) {
   // Your code goes here...
+  const asteroid = data.asteroids.find(asteroid => asteroid.name === asteroidName);
+    if (asteroid) {
+      const asteroidData = {
+        name: asteroid.name,
+        discoveryYear: asteroid.discoveryYear,
+        orbitalPeriod: asteroid.orbitalPeriod
+      };
+      return asteroidData;
+    } 
+    else {
+      return null;
+    }    
 }
+  
 
+let earth = getAsteroidDataByName(data, '624 Hektor');
+console.log(earth)
 
 
 // === TEST YOURSELF ===

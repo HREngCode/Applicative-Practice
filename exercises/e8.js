@@ -6,7 +6,19 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+  let planetWithMoon = data.planets.find(function(planet) {
+    return planet.moons.includes(moonName);
+  });
+  
+  if (planetWithMoon) {
+    return planetWithMoon.name;
+  }
 }
+
+let planetByMoon1 = findPlanetNameByMoon(data, 'Triton');
+console.log(planetByMoon1);
+
+
 
 
 

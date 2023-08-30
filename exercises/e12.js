@@ -4,21 +4,12 @@ import { data } from "../data/data";
 // Return the sum of all moons for all planets
 // Return example: 42
 
-export 
-function allPlanetsMoonsCount(data) {
+export function allPlanetsMoonsCount(data) {
   // Your code goes here...
-  const moonTotal = data.planets.reduce(function(acc, planet) {
-    if(planet.moonsCount != undefined) {
-      return acc + planet.moonsCount;
-    }
-    else {
-      return acc;
-    }
-  }, 0);
-  return moonTotal;
+  return data.planets.reduce((acc, planet) => (
+    planet.moonsCount != undefined ? acc + planet.moonsCount : acc
+  ), 0);
 }
-
-let planetMoonCount = allPlanetsMoonsCount(data);
 
 
 

@@ -6,18 +6,9 @@ import { data } from "../data/data";
 
 export function getAsteroidsDiscoveredAfterYear(data, year) {
   // Your code goes here...
-  let asteroidsDiscovered = data.asteroids.filter(function(asteroid) {
-    return asteroid.discoveryYear > year;
-  });
-
-  let asteroidNames = asteroidsDiscovered.map(function(asteroid) {
-    return asteroid.name;
-  });
-
-  return asteroidNames;
+  return data.asteroids.filter((asteroid) => asteroid.discoveryYear > year)
+  .map((asteroid) => asteroid.name);
 }
-
-let asteroidsDiscoveredAfterYear = getAsteroidsDiscoveredAfterYear(data, 2000);
 
 
 // === TEST YOURSELF ===

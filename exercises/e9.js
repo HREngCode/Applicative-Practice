@@ -6,11 +6,8 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
-  let earthData = data.planets.find(planet => planet.name === "Earth")
-  return earthData;
+  return data.planets.find(planet => planet.name === "Earth")
 }
-
-let earth = getEarthData(data);
 
 
 

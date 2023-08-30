@@ -9,14 +9,61 @@
  */
 
 export function minBy(array, cb) {
-  // Your code goes here...
 
+    if (array.length === 0) {
+    return undefined; 
+  }
+  
+  let minAmount = cb(array[0]);
+  let minReturnAmount = array[0];
+
+  for (let element of array) {
+    const value = cb(element);
+    if (value < minAmount) {
+      minAmount = value;
+      minReturnAmount = element;
+    }
+  }
+  
+  return minReturnAmount;
 }
 
 export function maxBy(array, cb) {
-  // Your code goes here...
 
+    if (array.length === 0) {
+    return undefined; 
+  }
+  
+  let maxAmount = cb(array[0]);
+  let maxReturnAmount = array[0];
+
+  for (let element of array) {
+    const value = cb(element);
+    if (value > maxAmount) {
+      maxAmount = value;
+      maxReturnAmount = element;
+    }
+  }
+  
+  return maxReturnAmount;
 }
+
+const people = (
+  [
+    { name: "jon", age: 29 },
+    { name: "peter", age: 30 },
+    { name: "andrey", age: 22 },
+    { name: "rachel", age: 25 }
+  ]
+);
+
+const maxAgePerson = maxBy(people, person => person.age);
+
+const minAgePerson = minBy(people, person => person.age);
+
+const maxNamePerson = maxBy(people, person => person.name);
+
+const minNamePerson = minBy(people, person => person.name);
 
 
 // === TEST YOURSELF ===

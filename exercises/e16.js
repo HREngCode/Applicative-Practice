@@ -8,11 +8,20 @@
  * The function MUST NOT use the find() method.
  */
 
-
 export function find(array, callback) {
-  // Your code goes here...
-  
+  // Your code goes here..
+  for (let vehicle of array) {
+    if (callback(vehicle)) {
+      return vehicle;
+    }   
+  }
+  return undefined;
 }
+
+const vehicles = ['Ford', 'Toyota', 'Chevrolet', 'Dodge', 'Nissan'];
+
+const dodgeTrucks = find(vehicles, vehicle => vehicle==='Dodge');
+console.log(dodgeTrucks);
 
 
 // === TEST YOURSELF ===

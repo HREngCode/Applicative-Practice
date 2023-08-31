@@ -18,11 +18,6 @@ export function find(array, callback) {
   return undefined;
 }
 
-const vehicles = ['Ford', 'Toyota', 'Chevrolet', 'Dodge', 'Nissan'];
-
-const dodgeTrucks = find(vehicles, vehicle => vehicle==='Dodge');
-console.log(dodgeTrucks);
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

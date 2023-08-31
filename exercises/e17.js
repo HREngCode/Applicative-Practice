@@ -57,14 +57,6 @@ const people = (
   ]
 );
 
-const maxAgePerson = maxBy(people, person => person.age);
-
-const minAgePerson = minBy(people, person => person.age);
-
-const maxNamePerson = maxBy(people, person => person.name);
-
-const minNamePerson = minBy(people, person => person.name);
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"

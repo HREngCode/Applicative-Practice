@@ -32,8 +32,6 @@ export function getGreatestDiscoveryYear(data) {
   return mostDiscoveriesYear;
 }
 
-const yearWithMostDiscoveries = getGreatestDiscoveryYear(data);
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-18"
 // If the test has all tests passed, switch to the next exercise file
